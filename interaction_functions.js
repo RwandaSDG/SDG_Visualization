@@ -190,9 +190,8 @@ var aboutdatadetails =  d3.select('#aboutdata')
         .attr("x", 4) 
         .attr("y", 16)   
         .attr("dy", 0)
-        .text("The data for this project comes from the Rwanda DHS and Integrated Household Living Conditions Surveys. Information about the data can be found through the Rwanda National Institute of Statistics (NISR). Details regarding estimation methodology can be found on Github here. Estimates based on insufficient sample size were removed from this report")
+        .text("The data for this project comes from the Rwanda DHS and Integrated Household Living Conditions Surveys. Information about the data can be found through the Rwanda National Institute of Statistics (NISR). Details regarding estimation methodology can be found on Github here. Users are advised that some disaggregated estimates have high variance due to weighting procedures and will be updated. Please check Standard Deviations listed in github dataset before citing estimates more granular than the district level")
 	   .call(wrap2, 80)
-
 
 
 

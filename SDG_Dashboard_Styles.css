@@ -438,14 +438,22 @@ radar.radarchartaggregate {
 #buttonplacement {
     
      position: absolute;
-    left: 82%;
-    width: 18%;
-    top: 91vh;
-    height: 15vh;
+    left: 2.5%;
+    width: 10%;
+    top: 94vh;
+    height: 10vh;
     margin: 0;
     background-color: none;
     opacity: 1;
-    overflow: visible;  
+    overflow: hidden;  
     
+    
+}
+
+#buttonclick {
+    
+        width: 90%%;
+        font-size: .9vw;
+
     
 }
