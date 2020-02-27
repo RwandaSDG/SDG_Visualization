@@ -1,0 +1,271 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Rwanda SDG & Equity Dashboard </title>
+</head>
+<script src= "https://d3js.org/d3.v5.js"> </script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+<script src="https://d3js.org/d3-queue.v3.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<link rel="stylesheet" type = "text/css" href="SDG_Dashboard_Styles.css"/>
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="Within_District_LineChart.js"></script>
+<script src="district_mapping.js"></script>
+<script src="interaction_functions.js"></script>
+<script src="Between-District-Line-Chart.js"></script>
+<script src="radarchartaggregate.js"></script>
+<script src="radarcharturbanrural.js"></script>
+<script src="radarchartmalefemale.js"></script>
+
+
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Open+Sans&display=swap" rel="stylesheet">
+
+
+    
+
+
+<script>
+     
+
+function initiate_visualization() {  
+    
+var figure1 = d3.select('#figure1')
+
+var sectionone =  figure1
+       .append('div')
+        .attr('class', 'sectionone')
+      // .attr("viewBox", "0 0 400 600")
+
+
+    
+var firstbox = figure1
+        .append('div')
+        .attr('class', 'firstbox')
+        .append("svg")
+         .attr('id', "RwandaChart")
+        .attr("viewBox", "0 0 700 700")
+
+var headingbox = figure1
+        .append('div')
+        .attr('class', 'headingbox')
+        .append("svg")
+        .attr("viewBox", "0 0 100 100")
+        .attr('id', "bounded")
+
+        .append("text")
+        .attr("id", "DistrictLabel")
+        .text("Rwanda Demographic Breakdown")
+        .attr("x", "45")
+
+
+var secondbox = figure1
+        .append('div')
+        .attr('class', 'secondbox')
+        .append("svg")
+         .attr('id', "DistrictChart")
+        .attr("viewBox", "0 0 700 700")
+
+    
+var thirdbox = figure1
+        .append('div')
+        .attr('class', 'thirdbox')
+      //  .attr("viewBox", "0 0 1000 1000")   
+
+
+  var headingbox2 = thirdbox.append("div")
+  .attr("class", "headingbox2")
+        .append("svg")
+        .attr("viewBox", "0 0 100 50")
+        .append("text")
+        .attr("x", "0")
+        .attr("id", "Instructions")
+        .append("tspan")
+        .text("Click on a District for")
+        .append("tspan")
+        .text("Further Breakdowns")
+        .attr("dy", 10)
+        .attr("x", "0")  
+  
+var headingbox3 = figure1
+        .append('div')
+        .attr('class', 'headingbox3')
+        .append("svg")
+        .attr("viewBox", "0 0 100 100")
+        .append("text")
+        .attr("id", "BetweenDistrictLabel")
+        .text("Comparison Between Districts")
+        .attr("x", "45")
+
+
+var headingbox4 = figure1
+        .append('div')
+        .attr('class', 'headingbox4')
+        .append("svg")
+        .attr("viewBox", "0 0 100 100")
+        .append("text")
+        .attr("id", "Instructions2")
+        .text("Click on a Line for More Comparisons")
+        .attr("x", "47")
+
+
+var headingbox5 = figure1
+        .append('div')
+        .attr('class', 'headingbox5')
+        .append("svg")
+        .attr("viewBox", "0 0 100 100")
+        .append("text")
+        .attr("id", "Instructions3")
+        .text("Hover to Highlight a District")
+        .attr("x", "47")
+
+
+
+var titlebox = figure1
+        .append('svg')
+        .attr('class', 'titlebox')
+        .attr("viewBox", "0 0 400 600")
+        .append("text")
+        .attr("id","TopTitle")
+        .text("Sustainable Development Goals Rwanda")
+        .attr("y", "50%")
+
+var dropdownbox = figure1
+        .append('div')
+        .attr('class', 'dropdownbox')
+
+
+var radarchart1 = figure1
+        .append('div')
+        .attr('class', 'radarchart1')
+        .append("svg")
+         .attr('id', "radarchart1")
+        .attr("viewBox", "0 0 700 700")
+        .attr("class", "radarchartaggregate")
+
+
+var radarchart2 = figure1
+        .append('div')
+        .attr('class', 'radarchart2')
+        .append("svg")
+         .attr('id', "radarchart1")
+        .attr("viewBox", "0 0 700 700")
+        .attr("class", "radarchartUR")
+
+var radarchart3 = figure1
+        .append('div')
+        .attr('class', 'radarchart3')
+        .append("svg")
+         .attr('id', "radarchart1")
+        .attr("viewBox", "0 0 700 700")
+        .attr("class", "radarchartMF")
+
+var radarchartlabels = figure1
+        .append('div')
+        .attr('class', 'radarchartlabels')
+        .append("svg")
+         .attr('id', "radarchartlabels")
+        .attr("viewBox", "0 0 100 100")
+
+var aboutdata = figure1
+        .append('div')
+        .attr('class', 'aboutdata')
+        .append("svg")
+         .attr('id', "aboutdata")
+        .attr("viewBox", "0 0 100 100")
+
+
+//var buttonplacement = figure1
+  //      .append('div')
+    //    .attr('id', 'buttonplacement')
+ //       .append("svg")
+   //      .attr('id', "buttonplacement")
+     //   .attr("viewBox", "0 0 100 100")
+
+
+      
+var District_Labels = [];
+var SDG_Labels;
+    
+
+
+    
+
+d3.csv("geometry_paths.csv")
+        .then(function(data){
+        district_shapes = data;
+        drawBaseMap(district_shapes);
+    });
+    
+    
+d3.csv("SDG_District_Estimates_Cleaned.csv", 
+                      function(d) {   return {
+                        SDG: d.SDG,
+                        Demographic: d.Demographic,
+                     //   Year: d3.timeParse("%Y")(d.Year), 
+                        Year: d3.format(".4")(d.Year) ,
+                        District: d.District,
+                        Estimate: +d.Estimate,
+                        Std_Error: +d["Std.Error"],
+                        Direction: +d["Direction"],
+                        SDGAchievement: +d["SDG_Achievement"],
+                            Data: d.Data,
+                        Label: d.Label
+
+                        }
+                        })
+        .then(function(data){ 
+            SDG_Data = data;    
+
+    d3.csv("Labels.csv")
+        .then(function(data1){ 
+            SDG_Labels = data1;    
+        d3.csv("district_labels.csv")
+            .then(function(data2) {
+                District_Labels = data2;
+            
+           drawDropdown(SDG_Labels, District_Labels);
+        DrawLineGraphRwanda(SDG_Data, SDG, District);
+         colorizeMap(SDG, SDG_Data);
+         DrawLineGraphDistricts(SDG_Data, SDG, Demographic);
+            radarChartDrawTotal(SDG_Data, "RWANDA");
+            radarChartDrawUR(SDG_Data, "RWANDA")
+         radarChartDrawMF(SDG_Data, "RWANDA")
+
+            });
+        });   
+    });  
+    
+
+    };
+
+
+
+
+    
+    
+</script>
+    
+<body onload = "initiate_visualization()">
+<figure id = figure1> 
+
+</figure>   
+    
+ <div id="tooltip">
+		<span id="districtname" style = "font-size: 14px" ></span> <span id="valuename" style="font-weight: bold;font-size: 14px"></span> 
+</div>
+    
+<div id = "buttonplacement">
+<button type="button" class="btn btn-secondary" onclick = "reset()"> Reset Visualization <br> to National Level</button>
+</div>
+    
+    
+    
+
+</body>
+</html>

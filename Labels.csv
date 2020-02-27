@@ -1,0 +1,19 @@
+﻿SDG,Label,Order
+poor,Poverty,1
+severely.poor,Severe Poverty,2
+health.insurance,Have Health Insurance,6
+care.when.ill,Receive Care When Ill,7
+primary.attendance,Primary Education,12
+secondary.attendance,Secondary Education,13
+literacy,Literacy,14
+improved.water,Clean Water,8
+improved.sanitation,Improved Sanitation,9
+electric.lighting,Electricity,10
+bednet,Use Bednets,11
+mal.nourished.children,Under 5 Malnutrition,3
+one.or.more.antenatal,One or More Antenatal Visits,15
+four.antenatal,Four Antenatal Visits,16
+skilled.delivery,Skilled Individual at Delivery of Child ,
+underweight,Underweight,4
+overweight,Overweight,5
+met.need.contraceptive,Met Need for Contraceptive,17
