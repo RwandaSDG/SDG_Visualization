@@ -16,10 +16,10 @@
               
 .firstbox {
            position: absolute;
-			left: 35%;
-			width: 30%;
-            top: 19vh;
-            height: 48vh;
+			left: 504px;
+			width: 432px;
+            top: 152px;
+            height: 384px;
 			margin: 0;
 			background-color: none;
             opacity: 1;
@@ -30,10 +30,10 @@
         
 .secondbox {
            position: absolute;
-			left: 67.5%;
-			width: 30.5%;
-            top: 16vh;
-            height: 51vh;
+			left: 972px;
+			width: 439.2px;
+            top: 128px;
+            height: 408px;
 			margin: 0;
 			background-color: #F8F8F8	;
             opacity: 1;
@@ -45,10 +45,10 @@
 
 .thirdbox {
            position: absolute;
-			left: 2%;
-			width: 31%;
-            top: 16vh;
-            height: 51vh;
+			left: 28.8px;
+			width: 446.4px;
+            top: 128px;
+            height: 408px;
 			margin: 0;
             opacity: 1;
             overflow: hidden;
@@ -61,10 +61,10 @@
 
 .headingbox4 {
            position: absolute;
-			left: 35%;
-			width: 30%;
-            top: 17vh;
-            height: 4vh;
+			left: 504px;
+			width: 432px;
+            top: 136px;
+            height: 32px;
 			margin: 0;
 			background-color: none;
             opacity: 1;
@@ -81,16 +81,12 @@
     
 }
 
-
-
-
-              
 .dropdownbox {
            position: absolute;
-			left: 2.5%;
-			width: 30%;
-            top: 10.5vh;
-            height: 4vh;
+			left: 36px;
+			width: 432px;
+            top: 84px;
+            height: 32px;
 			margin: 0;
 			background-color: none;
             opacity: 1;
@@ -101,10 +97,10 @@
 
 .headingbox {
            position: absolute;
-			left: 35%;
-			width: 30%;
-            top: 9.5vh;
-            height: 6vh;
+			left: 504px;
+			width: 432px;
+            top: 76px;
+            height: 48px;
 			margin: 0;
 			background-color: none;
             opacity: 1;
@@ -132,8 +128,8 @@
            position: absolute;
 			left: 2.5%;
 			width: 30%;
-            top: 2.5vh;
-            height: 4vh;
+            top: 20px;
+            height: 32px;
 			margin: 0;
 			background-color: none;
             opacity: 1;
@@ -156,10 +152,10 @@
 
 .headingbox3 {
            position: absolute;
-			left: 67.5%;
-			width: 30%;
-            top: 9.5vh;
-            height: 6vh;
+			left: 964.8px;
+			width: 432px;
+            top: 76px;
+            height: 48px;
 			margin: 0;
 			background-color: none;
             opacity: 1;
@@ -179,10 +175,10 @@
 
 .headingbox5 {
            position: absolute;
-			left: 67.5%;
-			width: 30%;
-            top: 17vh;
-            height: 4vh;
+			left: 964.8px;
+			width: 432px;
+            top: 136px;
+            height: 32px;
 			margin: 0;
 			background-color: none;
             opacity: 1;
@@ -207,10 +203,10 @@
 
 .titlebox {
            position: absolute;
-			left: 0%;
-			width: 100%;
-            top: 0.5vh;
-            height: 7.5vh;
+			left: 0px;
+			width: 1440px;
+            top: 4px;
+            height: 60px;
 			margin: 0;
 			background-color: #E8E8E8		;
             opacity: 1;
@@ -276,7 +272,7 @@ text {
 .RwandaChart {
     position: absolute;
     top: 30%;
-    left: 0%;
+    left: 0px;
     z-index: 0;
     
 }
@@ -328,10 +324,10 @@ text {
 
 .radarchart1{
      position: absolute;
-			left: 20%;
-			width: 20%;
-            top: 69vh;
-            height: 31vh;
+			left: 288px;
+			width: 288px;
+            top: 552px;
+            height: 248px;
 			margin: 0;
 			background-color: none;
             opacity: 1;
@@ -348,10 +344,10 @@ radar.radarchartaggregate {
 
 .radarchart2{
      position: absolute;
-			left: 40%;
-			width: 20%;
-            top: 69vh;
-            height: 31vh;
+			left: 576px;
+			width: 288px;
+            top: 552px;
+            height: 248px;
 			margin: 0;
 			background-color: none;
             opacity: 1;
@@ -362,10 +358,10 @@ radar.radarchartaggregate {
 
 .radarchart3{
     position: absolute;
-    left: 60%;
-    width: 20%;
-    top: 69vh;
-    height: 31vh;
+    left: 864px;
+    width: 288px;
+    top: 552px;
+    height: 248px;
     margin: 0;
     background-color: none;
     opacity: 1;
@@ -375,10 +371,10 @@ radar.radarchartaggregate {
 
 .radarchartlabels {
     position: absolute;
-    left: 2%;
-    width: 18%;
-    top: 69vh;
-    height: 31vh;
+    left: 28.8px;
+    width: 259.2px;
+    top: 552px;
+   height: 248px;
     margin: 0;
     background-color: none;
     opacity: 1;
@@ -414,10 +410,10 @@ radar.radarchartaggregate {
 
 .aboutdata {
     position: absolute;
-    left: 80%;
-    width: 18%;
-    top: 69vh;
-    height: 20vh;
+    left: 1152px;
+    width: 259.2px;
+    top: 552px;
+    height: 160px;
     margin: 0;
     background-color: none;
     opacity: 1;
@@ -438,10 +434,10 @@ radar.radarchartaggregate {
 #buttonplacement {
     
      position: absolute;
-    left: 2.5%;
-    width: 10%;
-    top: 94vh;
-    height: 10vh;
+    left: 36px;
+    width: 144px;
+    top: 752px;
+    height: 80px;
     margin: 0;
     background-color: none;
     opacity: 1;
@@ -452,8 +448,15 @@ radar.radarchartaggregate {
 
 #buttonclick {
     
-        width: 90%%;
+        width: 90%;
         font-size: .9vw;
 
+}
+
+#chart {
+    width: 20%;
+    left: 2.5%
+    
+    
     
 }
