@@ -39,7 +39,7 @@ function wrap2(text, width) {
 			word,
 			line = [],
 			lineNumber = 0,
-			lineHeight = 1, // ems
+			lineHeight = 1.2, // ems
 			y = text.attr("y"),
 			x = text.attr("x"),
 			dy = parseFloat(text.attr("dy")),
@@ -151,7 +151,7 @@ var radarcharttitles =  d3.select('#radarchartlabels')
         .attr("id", "radarchartitles")
         .attr("x", 4) 
         .attr("y", 4)   
-        .attr("dy", 0)
+        .attr("dy", .01)
         .text("Percent Achievement of SDGs in Rwanda")
 	   .call(wrap2, 90)
         
@@ -182,7 +182,6 @@ var aboutdatatitles =  d3.select('#aboutdata')
         .attr("y", 4)   
         .attr("dy", 0)
         .text("About the Data")
-	   .call(wrap2, 90)
 
 var aboutdatadetails =  d3.select('#aboutdata')
         .append("text")
