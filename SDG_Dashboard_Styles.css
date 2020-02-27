@@ -76,7 +76,7 @@
 #Instructions2 {
     dominant-baseline: hanging;
     text-anchor: middle;
-    font-size: .20vw;
+    font-size: 3px;
     font-weight: lighter;
     
 }
@@ -118,7 +118,7 @@
 #DistrictLabel {
     dominant-baseline: hanging;
     text-anchor: middle;
-    font-size: .3vw;
+    font-size: 4.5px;
     font-weight: bold;
     
 }
@@ -140,7 +140,7 @@
 #Instructions {
     dominant-baseline: hanging;
     text-anchor: left;
-    font-size: .7vw;
+    font-size: 9px;
     font-family: 'Open Sans', sans-serif;
         font-weight: lighter;
 
@@ -166,7 +166,7 @@
 #BetweenDistrictLabel {
     dominant-baseline: hanging;
     text-anchor: middle;
-    font-size: .3vw;
+    font-size: 4.5px;
     font-weight: bold;    
 }
 
@@ -189,7 +189,7 @@
 #Instructions3 {
     dominant-baseline: hanging;
     text-anchor: middle;
-    font-size: .20vw;
+    font-size: 3px;
     font-weight: lighter;
     
 }
@@ -217,7 +217,7 @@
 #TopTitle {
     dominant-baseline: middle;
     text-anchor: middle;
-    font-size:  25vw;
+    font-size:  400px;
     font-weight: Bold;  
         font-family: 'Open Sans', sans-serif;
 
@@ -279,11 +279,10 @@ text {
 
 .sdgselector{
         position: relative;
-        width: 55%;
-        top: 0%;
-        left: 2%;
+        width: 200px;
+        left: 10px;
        background-color: transparent;
-        font-size: 1.25vw;
+        font-size: 18px;
 
 
 }
@@ -316,7 +315,7 @@ text {
 
 #SDGSelectorLabel{
   font-weight: Bold;
-    font-size: 1.25vw;
+    font-size: 18px;
         dominant-baseline: hanging;
 
 
@@ -384,7 +383,7 @@ radar.radarchartaggregate {
 #legendtext {
     dominant-baseline: middle;
     text-anchor: left;
-    font-size: .4vw;
+    font-size: 5px;
     font-family: 'Open Sans', sans-serif;
         font-weight: lighter;
     
@@ -393,7 +392,7 @@ radar.radarchartaggregate {
 #radarchartitles {
      dominant-baseline: hanging;
     text-anchor: left;
-    font-size: .6vw;
+    font-size: 9px;
     font-family: 'Open Sans', sans-serif;
         font-weight: lighter; 
     
@@ -402,7 +401,7 @@ radar.radarchartaggregate {
 #radarchartexplanations {
      dominant-baseline: hanging;
     text-anchor: left;
-    font-size: .3vw;
+    font-size: 4px;
     font-family: 'Open Sans', sans-serif;
         font-weight: lighter; 
     
@@ -424,7 +423,7 @@ radar.radarchartaggregate {
 #aboutdatatitles {
      dominant-baseline: hanging;
     text-anchor: left;
-    font-size: .6vw;
+    font-size: 9px;
     font-family: 'Open Sans', sans-serif;
         font-weight: lighter; 
     
@@ -449,7 +448,7 @@ radar.radarchartaggregate {
 #buttonclick {
     
         width: 90%;
-        font-size: .9vw;
+        font-size: 12px;
 
 }
 
