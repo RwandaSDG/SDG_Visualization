@@ -112,7 +112,7 @@ subset_map = subset_map_1.filter(function(el) {
     
 d3.selectAll("#legend").remove();
     
-var svgLegend = mapsvg.append('g').attr("id","legend").attr("transform", "translate(" + 400 + ","+ 670 + ")");
+var svgLegend = mapsvg.append('g').attr("id","legend").attr("transform", "translate(" + 400 + ","+ 660 + ")");
 var defs = svgLegend.append('defs');
 var linearGradient = defs.append('linearGradient')
 		.attr('id', 'linear-gradient');
