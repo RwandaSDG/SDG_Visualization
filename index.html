@@ -10,11 +10,12 @@
 <script src="https://d3js.org/d3-queue.v3.min.js"></script>
 <script src="https://d3js.org/topojson.v1.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Open+Sans&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-<link rel="stylesheet" type = "text/css" href="SDG_Dashboard_Styles.css"/>
-<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" type = "text/css" href="SDG_Dashboard_Styles_Concrete.css"/>
+
 <script src="Within_District_LineChart.js"></script>
 <script src="district_mapping.js"></script>
 <script src="interaction_functions.js"></script>
@@ -22,9 +23,8 @@
 <script src="radarchartaggregate.js"></script>
 <script src="radarcharturbanrural.js"></script>
 <script src="radarchartmalefemale.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.0.1/spin.min.js'></script> 
 
-
-<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Open+Sans&display=swap" rel="stylesheet">
 
 
     
@@ -32,6 +32,9 @@
 
 <script>
      
+
+      
+    
 
 function initiate_visualization() {  
     
@@ -87,6 +90,10 @@ var thirdbox = figure1
         .attr("id", "Instructions")
         .append("tspan")
         .text("Click on a District for")
+          .attr("x", "0")  
+            .attr("y", "10")  
+
+
         .append("tspan")
         .text("Further Breakdowns")
         .attr("dy", 10)
@@ -203,7 +210,7 @@ d3.csv("geometry_paths.csv")
     });
     
     
-d3.csv("SDG_District_Estimates.csv", 
+d3.csv("SDG_District_Estimates_Cleaned.csv", 
                       function(d) {   return {
                         SDG: d.SDG,
                         Demographic: d.Demographic,
@@ -236,6 +243,9 @@ d3.csv("SDG_District_Estimates.csv",
             radarChartDrawTotal(SDG_Data, "RWANDA");
             radarChartDrawUR(SDG_Data, "RWANDA")
          radarChartDrawMF(SDG_Data, "RWANDA")
+            
+            
+
 
             });
         });   
@@ -260,11 +270,11 @@ d3.csv("SDG_District_Estimates.csv",
 		<span id="districtname" style = "font-size: 14px" ></span> <span id="valuename" style="font-weight: bold;font-size: 14px"></span> 
 </div>
     
-    
 <div id = "buttonplacement">
 <button type="button" class="btn btn-secondary" id = "buttonclick" onclick = "reset()"> Reset Visualization <br> to National Level</button>
 </div>
     
+<div id = "chart"> </div>
     
     
 

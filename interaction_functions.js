@@ -39,7 +39,7 @@ function wrap2(text, width) {
 			word,
 			line = [],
 			lineNumber = 0,
-			lineHeight = 1.2, // ems
+			lineHeight = 1, // ems
 			y = text.attr("y"),
 			x = text.attr("x"),
 			dy = parseFloat(text.attr("dy")),
@@ -195,6 +195,7 @@ var aboutdatadetails =  d3.select('#aboutdata')
 
 
 
+
     
     
     
@@ -245,7 +246,7 @@ dimpaths();
   d3.select("#DistrictLabel")
             .text(sdg_label + " in " + d.District )
             //  .text("SDG Attainment in " + d.District )
-                		.attr("dy", "0.05em")
+                		.attr("dy", "0.01em")
 
     		  .call(wrap, 60);
     
@@ -285,7 +286,7 @@ function onclickdemographic(d,i) {
     d3.selectAll("#BetweenDistrictLabel")
             .text(sdg_label + " Among " + id )
             //  .text("SDG Attainment in " + d.District )
-                		.attr("dy", "0.05em")
+                		.attr("dy", "0.01em")
 
     		  .call(wrap, 60);
     
